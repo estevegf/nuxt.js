@@ -1,8 +1,9 @@
 <template>
   <div class="container">
     <div>
+      <logo />
       <h1 class="title">
-        Home Page
+        Education Page
       </h1>
     </div>
   </div>
@@ -11,14 +12,10 @@
 <script>
 export default {
   head: {
-    title: 'Home - Nuxt',
+    title: 'Education - Nuxt',
     meta: [
-      { hid: 'description', name: 'description', content: 'Home page description' }
+      { hid: 'description', name: 'description', content: 'Education page description' }
     ]
   }
 }
 </script>
-
-<style>
-
-</style>
