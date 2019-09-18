@@ -12,13 +12,19 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/icono.ico' },
+      { rel: 'preload', type: 'style', href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' }
     ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    color: '#4FC08D',
+    failedColor: '#bf5050',
+    position: 'absolute',
+    duration: 1500
+  },
   /*
   ** Global CSS
   */
@@ -49,6 +55,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    retry: { retries: 3 }
   },
   /*
   ** Build configuration
