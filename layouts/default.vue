@@ -47,7 +47,7 @@ export default {
     }
   }
 
-  @media (min-width: 1300px) {
+  @media (min-width: 1500px) {
     .container {
       padding: 0 14em !important;
       font-size: large;
@@ -56,7 +56,7 @@ export default {
 
   @media (min-width: 1200px) {
     .l-6 {
-      width: 50% !important;
+      width: 49.65% !important;
     }
   }
 

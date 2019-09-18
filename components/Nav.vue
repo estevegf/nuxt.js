@@ -2,7 +2,7 @@
   <nav class="fixed-top">
     <div>
       <nuxt-link class="nav-logo " :to="{ name: 'index' }">
-        <img src="/img/esteve-logo.svg" height="40" alt="esteve_logo">
+        <img src="/img/esteve-logo.svg" height="40" alt="esteve_logo" />
       </nuxt-link>
     </div>
     <ul>
@@ -13,7 +13,7 @@
             src="/img/icono-education.svg"
             height="18"
             alt="education"
-          >
+          />
           EDUCATION
         </nuxt-link>
       </li>

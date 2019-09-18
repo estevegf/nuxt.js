@@ -19,7 +19,7 @@
               :src="logoOne"
               width="100"
               alt="experience Funitec La Salle"
-            >
+            />
             <div>
               <h3>Intership - Funitec</h3>
               <ul>
@@ -36,7 +36,7 @@
               :src="logoTwo"
               width="100"
               alt="experience Uniks"
-            >
+            />
             <div>
               <h3>Frontend Developer - Uniks</h3>
               <ul>

@@ -2,10 +2,10 @@
   <div class="card">
     <div class="s-6 card-left">
       <img
-        :src="education.img"
-        class="responsive card-image"
+        :data-src="education.img"
+        class="responsive card-image lazyload"
         :alt="education.school"
-      >
+      />
     </div>
     <div class="s-6 card-right">
       <div class="information">
@@ -35,7 +35,7 @@ export default {
   .card {
     display: inline-flex;
     width: 100%;
-    min-height: 229px;
+    min-height: 280px;
     align-items: center;
     margin: 0 0 2em 0;
     background-color: gainsboro;
@@ -46,6 +46,7 @@ export default {
 
   .card-left {
     display: flex;
+    min-height: 180px;
   }
 
   .information {
