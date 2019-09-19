@@ -1,11 +1,16 @@
 <template>
   <div class="card">
-    <div class="s-6 card-left">
+    <div class="s-6 card-left ratio-container">
       <img
-        :data-src="education.img"
-        class="responsive card-image lazyload"
+        :src="education.img.lqip"
+        :data-src="education.img.x400"
+        class="card-image lazyload blur-up"
         :alt="education.school"
       />
+      <!-- noscript pattern -->
+      <noscript inline-template>
+        <img :src="education.img.x400" class="card-image" width="100%" />
+      </noscript>
     </div>
     <div class="s-6 card-right">
       <div class="information">
@@ -35,7 +40,6 @@ export default {
   .card {
     display: inline-flex;
     width: 100%;
-    min-height: 280px;
     align-items: center;
     margin: 0 0 2em 0;
     background-color: gainsboro;
@@ -45,8 +49,7 @@ export default {
   }
 
   .card-left {
-    display: flex;
-    min-height: 180px;
+    display: block;
   }
 
   .information {
@@ -65,5 +68,36 @@ export default {
     .card-image {
       border-radius: 5px 5px 0 0;
     }
+  }
+
+  .blur-up {
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    transition: filter 400ms, -webkit-filter 400ms;
+  }
+
+  .blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+
+  .ratio-container {
+    position: relative;
+  }
+  .ratio-container:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    /* 3:2 = 66.66% = calc(2 / 3 * 100%) */
+    padding-bottom: 66.66%;
+  }
+  .ratio-container > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 </style>

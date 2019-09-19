@@ -5,6 +5,9 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -13,7 +16,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icono.ico' },
-      { rel: 'preload', type: 'style', href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' }
+      { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' }
     ]
   },
   /*
@@ -48,8 +51,8 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/axios'
+    // '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration

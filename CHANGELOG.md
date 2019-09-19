@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### [v0.1.0; 16-08-2019]
 
 #### 
+- 18/09/2019: noscript for images if no JS
+- 18/09/2019: Wide screen
 - 17/09/2019: Lazy load API images
 - 17/09/2019: Robots.txt
 - 17/09/2019: Responsive layout

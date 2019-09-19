@@ -2,13 +2,15 @@
   <div>
     <Banner class="bar-margin" :image-url="educationBanner" />
     <div class="container">
-      <h1>Education</h1>
-      <section class="center">
-        <Card
-          v-for="(edu, index) in education"
-          :key="index"
-          :education="edu"
-        />
+      <section class="wide-screen">
+        <h1>Education</h1>
+        <div class="center">
+          <Card
+            v-for="(edu, index) in education"
+            :key="index"
+            :education="edu"
+          />
+        </div>
       </section>
     </div>
   </div>

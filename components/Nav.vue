@@ -1,23 +1,25 @@
 <template>
   <nav class="fixed-top">
-    <div>
-      <nuxt-link class="nav-logo " :to="{ name: 'index' }">
-        <img src="/img/esteve-logo.svg" height="40" alt="esteve_logo" />
-      </nuxt-link>
-    </div>
-    <ul>
-      <li>
-        <nuxt-link class="link-hover" :to="{ name: 'education' }">
-          <img
-            class="icon-nav"
-            src="/img/icono-education.svg"
-            height="18"
-            alt="education"
-          />
-          EDUCATION
+    <div class="wide-screen flex-nav">
+      <div>
+        <nuxt-link class="nav-logo " :to="{ name: 'index' }">
+          <img src="/img/esteve-logo.svg" height="40" alt="esteve_logo" />
         </nuxt-link>
-      </li>
-    </ul>
+      </div>
+      <ul>
+        <li>
+          <nuxt-link class="link-hover" :to="{ name: 'education' }">
+            <img
+              class="icon-nav"
+              src="/img/icono-education.svg"
+              height="18"
+              alt="education"
+            />
+            EDUCATION
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
   </nav>
 </template>
 
@@ -29,12 +31,15 @@ export default {
 
 <style scoped>
   nav {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
     padding: 0 1em;
     background: white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .flex-nav {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
   }
 
   .fixed-top {

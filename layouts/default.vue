@@ -25,6 +25,11 @@ export default {
     font-family: "Montserrat", sans-serif;
   }
 
+  .wide-screen {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
   .bar-margin {
     margin-top: 50px;
   }
@@ -65,12 +70,6 @@ export default {
       width: 50% !important;
     }
   }
-
-  .responsive {
-    width: 100%;
-    height: auto;
-  }
-
   .center {
     text-align: center;
   }
