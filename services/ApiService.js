@@ -11,6 +11,6 @@ const apiClient = axios.create({
 
 export default {
   getInfo () {
-    return apiClient.get('/education_v2')
+    return apiClient.get('/education_v3')
   }
 }

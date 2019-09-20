@@ -4,6 +4,8 @@
       <img
         :src="education.img.lqip"
         :data-src="education.img.x400"
+        :data-srcset="`${education.img.x200} 200w, ${education.img.x400} 400w, ${education.img.x800} 800w`"
+        data-sizes="(max-width: 350px) 200px, (min-width: 1200px) 800px, 400px"
         class="card-image lazyload blur-up"
         :alt="education.school"
       />
