@@ -51,8 +51,8 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
-    // '@nuxtjs/pwa'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
@@ -60,6 +60,27 @@ export default {
   */
   axios: {
     retry: { retries: 3 }
+  },
+  /*
+  ** PWA module configuration
+  ** See https://pwa.nuxtjs.org/modules/manifest.html
+  */
+  pwa: {
+    manifest: {
+      name: 'Web Page of Esteve',
+      short_name: 'Esteve Genovard Ferriol',
+      lang: 'en'
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: 'https://us-central1-tfg2019-ae3f8.cloudfunctions.net/api/education_v3',
+          handler: 'cacheFirst',
+          method: 'GET',
+          strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+        }
+      ]
+    }
   },
   /*
   ** Build configuration
